@@ -14,12 +14,14 @@
 
 *mybatisGeneratorConfig.xml
 *MybatisGeneratorMain.java
-sphrosyne-dao/src/test/*
+report-dao/src/test/*
 target/
 test_bootstrap/
 #test/
 .idea
 *.iml
+report-service/logs/
+report-service/temp/
 
 
 
@@ -57,7 +59,3 @@ Thumbs.db
 .sass-cache/
 .codekit-config.json
 config.codekit
-
-sphrosyne-dao/target
-sphrosyne-facade/target
-sphrosyne-service/target
