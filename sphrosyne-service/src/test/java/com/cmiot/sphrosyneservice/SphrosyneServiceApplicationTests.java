@@ -1,7 +1,11 @@
 package com.cmiot.sphrosyneservice;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
+import com.cmiot.sphrosyne.facade.MultiDatabaseService;
+import com.cmiot.sphrosyne.facade.StudyService;
+import com.cmiot.sphrosyne.mapper.NetworkStatisticsTaskMapper;
 import com.cmiot.sphrosyne.mapper.UserMapper;
+import com.cmiot.sphrosyne.pojo.NetworkStatisticsTask;
 import com.cmiot.sphrosyne.pojo.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +17,16 @@ import java.util.List;
 class SphrosyneServiceApplicationTests {
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    NetworkStatisticsTaskMapper networkStatisticsTaskMapper;
+    @Autowired
+    StudyService studyService;
+    @Autowired
+    MultiDatabaseService multiDatabaseService;
 
     @Test
     void contextLoads() {
-        System.out.println(("----- selectAll method test ------"));
-        List<User> userList = userMapper.selectList(null);
-        for(User user:userList) {
-            System.out.println(user);
-        }
+        multiDatabaseService.testMulti();
 
     }
 
