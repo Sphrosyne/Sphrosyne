@@ -1,6 +1,7 @@
 package com.cmiot.sphrosyneservice;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cmiot.sphrosyne.facade.MultiDatabaseService;
 import com.cmiot.sphrosyne.facade.StudyService;
 import com.cmiot.sphrosyne.mapper.NetworkStatisticsTaskMapper;
@@ -26,8 +27,11 @@ class SphrosyneServiceApplicationTests {
 
     @Test
     void contextLoads() {
-        multiDatabaseService.testMulti();
-
+//        multiDatabaseService.testMulti();
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("age",18).or();
+        queryWrapper.eq("age",20);
+        userMapper.selectList(queryWrapper).forEach(user -> System.out.println(user.getName()));
     }
 
 }
