@@ -1,6 +1,7 @@
 package com.cmiot.sphrosyneservice;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
+import com.baomidou.dynamic.datasource.annotation.DSTransactional;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cmiot.sphrosyne.facade.MultiDatabaseService;
 import com.cmiot.sphrosyne.facade.StudyService;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 class SphrosyneServiceApplicationTests {
@@ -27,11 +29,12 @@ class SphrosyneServiceApplicationTests {
 
     @Test
     void contextLoads() {
-//        multiDatabaseService.testMulti();
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("age",18).or();
-        queryWrapper.eq("age",20);
-        userMapper.selectList(queryWrapper).forEach(user -> System.out.println(user.getName()));
+        multiDatabaseService.testMulti();
+
+
+/*        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("age",1);
+        userMapper.selectList(queryWrapper).forEach(user -> System.out.println(user.getName()));*/
     }
 
 }

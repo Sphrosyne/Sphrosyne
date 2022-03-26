@@ -1,12 +1,17 @@
 package com.cmiot.sphrosyneservice.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DSTransactional;
 import com.cmiot.sphrosyne.facade.MultiDatabaseService;
 import com.cmiot.sphrosyne.facade.StudyService;
+import com.cmiot.sphrosyne.facade.TransService;
 import com.cmiot.sphrosyne.mapper.NetworkStatisticsTaskMapper;
 import com.cmiot.sphrosyne.pojo.NetworkStatisticsTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,20 +19,18 @@ import java.util.List;
  */
 @Service
 public class MultiDatabaseServiceImpl implements MultiDatabaseService {
-    @Autowired
-    NetworkStatisticsTaskMapper networkStatisticsTaskMapper;
 
-    @Autowired
+    @Resource
+    TransService transService;
+
+    @Resource
     StudyService studyService;
 
     @Override
+    @DSTransactional
     public void testMulti() {
         studyService.testStudy();
 
-        System.out.println(("----- selectAll method test ------"));
-        List<NetworkStatisticsTask> networkStatisticsTaskList = networkStatisticsTaskMapper.selectList(null);
-        for(NetworkStatisticsTask networkStatisticsTask:networkStatisticsTaskList) {
-            System.out.println(networkStatisticsTask);
-        }
+        transService.getAll();
     }
 }
