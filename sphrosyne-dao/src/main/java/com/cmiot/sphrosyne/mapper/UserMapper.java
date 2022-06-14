@@ -1,3 +1,4 @@
+/*
 package com.cmiot.sphrosyne.mapper;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
@@ -8,3 +9,4 @@ import com.cmiot.sphrosyne.pojo.User;
 @DS("db2")
 public interface UserMapper extends BaseMapper<User> {
 }
+*/
