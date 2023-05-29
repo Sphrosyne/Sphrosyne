@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Audit xmlns="http://xmlns.oracle.com/oracleas/schema/dbserver_audittrail-11_2.xsd"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.oracle.com/oracleas/schema/dbserver_audittrail-11_2.xsd">
+   <Version>11.2</Version>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>5</StatementId><EntryId>3</EntryId><Extended_Timestamp>2023-05-15T01:40:01.681904Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>1</Stmt_Type><Scn>1721016</Scn><DBID>1384114315</DBID>
+<Sql_Text>SELECT * FROM (
+    SELECT t.*, ROWID
+    FROM TEST.TABLE_NAME t
+) WHERE ROWNUM &lt;= 501</Sql_Text>
+</AuditRecord>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>9</StatementId><EntryId>7</EntryId><Extended_Timestamp>2023-05-15T01:40:04.591564Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>1</Stmt_Type><TransactionId>0000000000000000</TransactionId><Scn>1721062</Scn><DBID>1384114315</DBID>
+<Sql_Text>SELECT * FROM (
+    SELECT t.*, ROWID
+    FROM TEST.TABLE_NAME t
+) WHERE ROWNUM &lt;= 501</Sql_Text>
+</AuditRecord>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>11</StatementId><EntryId>11</EntryId><Extended_Timestamp>2023-05-15T01:40:10.006301Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>8</Stmt_Type><TransactionId>06001800F2030000</TransactionId><Scn>1721133</Scn><DBID>1384114315</DBID>
+<Sql_Bind> #1(1):1 #2(1):2 #3(18):AAASNnAAEAAAAINAAA</Sql_Bind>
+<Sql_Text>DELETE FROM TEST.TABLE_NAME WHERE COLUMN_NAME = :1  AND COLUMN_NAME2 = :2  AND COLUMN_NAME3 IS NULL AND COLUMN_NAME4 IS NULL AND COLUMN_NAME5 IS NULL AND COLUMN_NAME6 IS NULL AND COLUMN_NAME7 IS NULL AND ROWID LIKE :3  ESCAPE &apos;#&apos;</Sql_Text>
+</AuditRecord>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>15</StatementId><EntryId>13</EntryId><Extended_Timestamp>2023-05-15T01:40:10.073712Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>1</Stmt_Type><TransactionId>06001800F2030000</TransactionId><Scn>1721138</Scn><DBID>1384114315</DBID>
+<Sql_Text>SELECT * FROM (
+    SELECT t.*, ROWID
+    FROM TEST.TABLE_NAME t
+) WHERE ROWNUM &lt;= 501</Sql_Text>
+</AuditRecord>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>18</StatementId><EntryId>17</EntryId><Extended_Timestamp>2023-05-15T01:40:18.680925Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>2</Stmt_Type><TransactionId>03001D0001040000</TransactionId><Scn>1721242</Scn><DBID>1384114315</DBID>
+<Sql_Bind> #1(0):  #2(0):  #3(0):  #4(1):1 #5(1):2 #6(0):  #7(0): </Sql_Bind>
+<Sql_Text>INSERT INTO TEST.TABLE_NAME (COLUMN_NAME, COLUMN_NAME2, COLUMN_NAME3, COLUMN_NAME4, COLUMN_NAME5, COLUMN_NAME6, COLUMN_NAME7) VALUES (:1 , :2 , :3 , :4 , :5 , :6 , :7 )</Sql_Text>
+</AuditRecord>
+<AuditRecord><Audit_Type>2</Audit_Type><Session_Id>132968</Session_Id><StatementId>0</StatementId><EntryId>19</EntryId><Extended_Timestamp>2023-05-15T01:40:18.738337Z</Extended_Timestamp><DB_User>TEST</DB_User><OS_User>202217799</OS_User><Userhost>cqca202217799n</Userhost><OS_Process>59694</OS_Process><Instance_Number>0</Instance_Number><Object_Schema>TEST</Object_Schema><Object_Name>TABLE_NAME</Object_Name><Policy_Name>CHK_TEST_TABLE_NAME_XML</Policy_Name><Stmt_Type>1</Stmt_Type><TransactionId>03001D0001040000</TransactionId><Scn>1721245</Scn><DBID>1384114315</DBID>
+<Sql_Text>SELECT * FROM (
+    SELECT t.*, ROWID
+    FROM TEST.TABLE_NAME t
+) WHERE ROWNUM &lt;= 501</Sql_Text>
+</AuditRecord>
+</Audit>
