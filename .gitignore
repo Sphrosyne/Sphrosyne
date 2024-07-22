@@ -19,6 +19,7 @@ target/
 test_bootstrap/
 #test/
 .idea
+.vscode
 *.iml
 report-service/logs/
 report-service/temp/
